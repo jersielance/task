@@ -48,9 +48,10 @@ test:
   password:
 
 production:
+  host: ec2-54-204-24-154.compute-1.amazonaws.com
   adapter: postgresql
   encoding: unicode
-  database: task_production
+  database: dff2e1lpurh969
   pool: 5
-  username: task
-  password:
+  username: lcjaadxafqbhyp
+  password: xlYt_rraD1CxGDf28ujucfcqkE
