@@ -28,7 +28,7 @@ development:
   #port: 5432
 
   # Schema search path. The server defaults to $user,public
-  schema_search_path: task, public
+#  schema_search_path: task, public
 
   # Minimum log levels, in increasing order:
   #   debug5, debug4, debug3, debug2, debug1,
@@ -47,11 +47,18 @@ test:
   username: jersie
   password: asd
 
-production:
-  host: ec2-54-204-24-154.compute-1.amazonaws.com
+#production:
+#  host: ec2-54-204-24-154.compute-1.amazonaws.com
+#  adapter: postgresql
+#  encoding: unicode
+#  database: dff2e1lpurh969
+#  pool: 5
+#  username: lcjaadxafqbhyp
+#  password: xlYt_rraD1CxGDf28ujucfcqkE
+test:
   adapter: postgresql
   encoding: unicode
-  database: dff2e1lpurh969
+  database: task_production
   pool: 5
-  username: lcjaadxafqbhyp
-  password: xlYt_rraD1CxGDf28ujucfcqkE
+  username: jersie
+  password: asd
