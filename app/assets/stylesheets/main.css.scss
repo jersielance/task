@@ -1,0 +1,103 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.error_messages {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: orangered;
+  }
+
+  ul {
+    list-style: square;
+    padding: 0 30px;
+
+    li {
+      color: #ff0000;
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background: lavender;
+  display: flex;
+
+  a, p {
+    padding: 10px;
+    align-items: flex-end;
+  }
+}
+section {
+ display: flex;
+  justify-content: center;
+
+  th {
+    background: cornflowerblue;
+
+  }
+  td  {
+    background: ghostwhite;
+  }
+
+  th, td {
+    border: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .allusers {
+    margin-top: 20px;
+  }
+
+  .form-reg {
+    display: flex;
+    flex-direction: column;
+
+
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px auto;
+      min-width: 500px;
+
+      input {
+        height: 30px;
+        padding: 10px;
+        width: 300px;
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+    }
+
+    .actions {
+      text-align: center;
+
+      input[type=submit] {
+        border: none;
+        background: cornflowerblue;
+        color: #ffffff;
+        font-size: 17px;
+        margin: 10px;
+        padding: 10px 20px;
+      }
+
+    }
+  }
+}
+

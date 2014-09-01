@@ -1,0 +1,18 @@
+<div class="form-reg">
+    <%= form_tag sessions_path do %>
+        <div class="field">
+          <h5>Email: </h5>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class="field">
+          <h5>Пароль: </h5>
+          <%= password_field_tag :password %>
+        </div>
+        <div>
+          <h4>Запомнить меня</h4>
+          <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+
+        </div>
+        <div class="actions"><%= submit_tag "Войти" %></div>
+    <% end %>
+</div>

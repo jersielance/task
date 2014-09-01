@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <p><%= link_to 'Главная', root_path  %></p>
+  <% if current_user %>
+      <p>Привет:</p>
+      <p><strong><%= current_user.name %> <%= current_user.last_name %></strong></p>
+      <p>Ваш email: </p>
+      <p><%= current_user.email %></p>
+      <%= link_to "Выйти", logout_path %>
+  <% else %>
+      <%= link_to "Зарегистрироваться", signup_path %>
+      <p>или</p>
+      <%= link_to "Войти", login_path %>
+  <% end %>
+</header>
+
+
+<section>
+  <%= yield %>
+</section>
+
+
+</body>
+</html>

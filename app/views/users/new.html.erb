@@ -1,0 +1,51 @@
+
+<%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Ошибки в форме:</h2>
+          <br/>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <br/>
+    <div class="form-reg">
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :login %>
+      <%= f.text_field :login %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :father_name %>
+      <%= f.text_field :father_name %>
+    </div>
+    <div class="field">
+      <%= f.label :date_birth %>
+      <%= f.date_select :date_birth, :order => [:day, :month, :year], :start_year => 1914, :end_year => 2000, :html => {:class => ['day', 'month', 'year']} %>
+    </div>
+    <div class="actions"><%= f.submit 'Зарегистрироваться' %></div>
+<% end %>
+</div>
